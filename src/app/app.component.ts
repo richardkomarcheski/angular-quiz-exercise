@@ -1,14 +1,24 @@
-import { Component } from "@angular/core";
-import { environment } from "./../environments/environment";
+import { Component } from '@angular/core';
+import { Product } from './core/models/product';
+import { CartService } from './core/services/cart.service';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  API_URL;
-  constructor() {
-    this.API_URL = environment.apiURL;
-  }
+	public products: Product[];
+
+	constructor(private cartService: CartService) {}
+
+	ngOnInit(): void {
+		this.cartService.getProducts().subscribe((response) => {
+			this.products = response;
+		});
+	}
+
+	public filterProducts() {
+		return this.products.slice(0, 5);
+	}
 }
