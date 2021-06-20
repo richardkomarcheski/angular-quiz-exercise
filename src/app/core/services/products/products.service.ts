@@ -1,14 +1,14 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { environment } from './../../../environments/environment.prod';
+import { environment } from '../../../../environments/environment.prod';
 import { catchError, retry } from 'rxjs/operators';
-import { Product } from '../models/product';
+import { Product } from '../../models/product';
 
 @Injectable({
 	providedIn: 'root'
 })
-export class CartService {
+export class ProductsService {
 	constructor(private http: HttpClient) {}
 
 	getProducts(): Observable<Product[]> {

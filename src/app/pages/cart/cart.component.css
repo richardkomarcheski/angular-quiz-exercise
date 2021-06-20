@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+}
+caption{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+th.mat-header-cell{
+  font-size: 16px;
+  font-weight: bold;
+
+}
+.mat-column-remove {
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+}
+.mat-column-cost {
+  width: 200px;
+  text-align: left;
+  font-weight: bold;
+}
