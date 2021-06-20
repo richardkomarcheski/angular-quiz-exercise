@@ -1,0 +1,14 @@
+.card {
+	max-width: 400px;
+	margin-top: 25px;
+  display: block;
+}
+.card-header{
+  display: block;
+}
+.header-image {
+	background-size: cover;
+}
+.cards {
+	text-align: -webkit-center;
+}

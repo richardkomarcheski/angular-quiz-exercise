@@ -1,0 +1,6 @@
+@import './custom-theme-definition.scss';
+
+@include mat-core();
+
+@include angular-material-theme($my-custom-theme);
+@include mat-button-theme($my-custom-theme);

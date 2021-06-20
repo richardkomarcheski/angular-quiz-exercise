@@ -1,0 +1,14 @@
+<div color="secondary" class="cards" *ngIf="products">
+	<mat-card *ngFor="let item of filterProducts()" class="card" >
+		<mat-card-header class="card-header">
+			<mat-card-title>{{ item.title }}</mat-card-title>
+			<mat-card-subtitle>{{ item.price }}</mat-card-subtitle>
+		</mat-card-header>
+		<img mat-card-image [src]="item.images[0]" [alt]="item.images[1] || item.images[2]" />
+		<mat-card-actions>
+			<button mat-button> <mat-icon>add_shopping_cart</mat-icon>
+				ADD TO CART</button>
+			<button mat-button [routerLink]="['/product']"  [queryParams]="{selectedProduct:item | json }"><mat-icon>info</mat-icon> DETAILS</button>
+		</mat-card-actions>
+	</mat-card>
+</div>

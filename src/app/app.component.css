@@ -1,11 +1,8 @@
-.example-card {
-  max-width: 400px;
-  margin-top: 25px;
+.example-spacer {
+	flex: 1 1 auto;
 }
 
-.example-header-image {
-  background-size: cover;
-}
-.cards{
-  text-align: -webkit-center;
+.center-title{
+  inline-size: -webkit-fill-available;
+  text-align-last: center;
 }
